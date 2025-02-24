@@ -11,21 +11,21 @@
     <meta name="keywords" content="">
 
     <!--Social Media Display-->
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
+    <meta property="og:title" content="Lume Web Design"/>
+    <meta property="og:description" content="We create beautiful, responsive websites"/>
     <meta property="og:type" content="website" />
-    <meta property="og:url" content=""/>
+    <meta property="og:url" content="https://www.lumewebdesign.com.au"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:secure_url" content=""/>
 
     <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/icon.svg">
-    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/icon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/images/logo1.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/images/logo1.svg">
 
     <!-- PNG Fallback (For older browsers) -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/android-chrome-512x512.png">
+    <link rel="icon" type="image/svg" sizes="32x32" href="/images/logo1.svg">
+    <link rel="icon" type="image/svg" sizes="16x16" href="/images/logo1.svg">
 
     <link rel="manifest" href="/site.webmanifest">
 
@@ -35,7 +35,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/local.css">
-    <title>Lume Web Design | Bellingen NSW</title>
+    <title>Lume Web Design</title>
 </head>
 <body>
 
@@ -45,17 +45,18 @@
         <!-- ============================================ -->
         <!--                   NAVIGATION                 -->
         <!-- ============================================ -->
-    
+        
     <header>
+            <div class="blur-bar"></div>    
             <!-- Logo -->
             <a href="/index.html">
-                <div class="logo-wrapper">
+                <div class="logo-wrapper fade-in">
                     <span class="logo-text">LU</span>
                     <span class="logo-text">ME</span>
                 </div>
             </a>
             <!-- Mobile Nav Strip -->
-            <div class="mobile-wrapper">
+            <div class="mobile-wrapper fade-in">
                 <div class="mobile-nav">
                     <!-- Hamburger Menu -->
                     <button aria-label="open the menu" id="menu-button" class="hamburger hamburger--spring hamburger-border" onclick="toggleNav()" type="button">
@@ -87,20 +88,24 @@
 
     </header>
         
-    <main id="main" class="background-image">
+<main id="main">
     
         <!-- ============================================ -->
         <!--                    LANDING                   -->
         <!-- ============================================ -->
-    
         <section id="landing-section">
                 <div class="landing-text">
-                    <h1 class="line-1">Responsive</h1>
-                    <h1 class="line-2">Engaging</h1>
-                    <h1 class="line-3">Websites</h1>
-                <div class="line-4-wrapper">
-                <p class="line-4">We handle everything from design to deployment with ongoing support.</p>
+                    <h1 class="line-1">Hi I'm Julian. I'm a web developer and creator of Lume Web Design </h1>
+                    
+                    <div class="line-2-wrapper">
+                        <p class="line-2">We create beautiful handcoded websites built for your brand starting at $999.</p>
+                        <form action="/contact.html" class="center-button fade-in-scroll">
+                            <button type="submit" class="button">Lets chat</button>
+                        </form>
+                    </div>
+                    
                 </div>
+                
         </section>
 
         <!-- ============================================ -->
@@ -109,15 +114,18 @@
 
         <section id="about-section">
             <div class="about-container">
+                
                 <h2 class="about-heading">What we do</h2>
-                <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="about-columns">
+                    <p class="about-text">We offer affordable, custom built, hand coded websites specific for your brand. With mobile first design, our websites are fully responsive which means they look great and function perfectly across all screen sizes. With our on-page search engine optimization (SEO), our sites are built to rank higher and attract more users to your site - exposing your brand and building your business. Get in touch today.</p>
+                    <h2 class="tagline-heading">We handle everything from design to deployment with ongoing support.</h2>
+                </div>
                 <form action="/about.html" class="center-button fade-in-scroll">
                     <button type="submit" class="button">About Us</button>
                 </form>
             </div>
             
         </section>
-
 
         <!-- ============================================ -->
         <!--                   Services                   -->
@@ -137,11 +145,11 @@
                     </div>
                     <div class="service">
                         <div class="service-wrapper">
-                            <h2 class="service-heading">Design</h2>
+                            <h2 class="service-heading">Hosting</h2>
                         </div>
                         <div class="line-break"></div>
                         <div class="service-wrapper">
-                            <p class="service-body">Opt for our graphic design service for branding, logos and layouts</p>
+                            <p class="service-body">We provide and manage website hosting so you dont have to </p>
                         </div>
                     </div>
                 </div>
@@ -158,7 +166,7 @@
                     </div>
                     <div class="service">
                         <div class="service-wrapper">
-                            <h2 class="service-heading">Copywriting</h2>
+                            <h2 class="service-heading">Copy</h2>
                         </div>
                         <div class="line-break"></div>
                         <div class="service-wrapper">

@@ -5,35 +5,38 @@
 @media only screen and (min-width: 0em) {
   #left-section {
     padding-bottom: 2em;
-    max-width: 35em;
+    max-width: 40em;
     margin: auto;
   }
   #left-section p {
     font-size: 1.5em;
-    font-family: "Roboto Variable";
+    font-family: "Heading";
     line-height: 1.5;
     color: #595959;
     margin-bottom: 0.05555556em;
   }
   #form {
-    padding-top: 4em;
+    padding-top: 9em;
     width: 90%;
-    max-width: 35em;
+    max-width: 40em;
     margin: auto;
     margin-bottom: -2em;
   }
   #form h2 {
-    font-family: "Gilda";
+    font-family: "heading";
     font-size: 2.2em;
     line-height: 1.16666667;
-    color: #000;
-    font-weight: 400;
+    color: var(--colourc);
+    font-weight: 500;
     margin-bottom: 0.66666667em;
     position: relative;
   }
+  #form h2 .italic {
+    font-family: "heading-italic";
+  }
   #form h5 {
     font-size: 1.1em;
-    font-family: "Roboto Variable";
+    font-family: "body";
     line-height: 1.55555556;
     color: #000;
     font-weight: 200;
@@ -41,24 +44,23 @@
     position: relative;
   }
   #form p a {
-    font-family: "Roboto Variable";
+    font-family: "body";
     font-size: 0.75em;
     line-height: 1.5;
     color: #000;
     margin-bottom: 1.33333333em;
     font-weight: 200;
+    transform: .3s ease;
+  }
+  #form p a:hover {
+    color: var(--colourc);
   }
   #form #contact {
     margin-bottom: 5em;
   }
   #form #contact .input-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin-bottom: 1.5em;
   }
   #form #contact .input-group label {
@@ -75,18 +77,20 @@
     border-bottom: 1px solid #d4d4d4;
     padding-top: 0.75em;
     padding-bottom: 0.75em;
+    background: transparent;
+    transition: .3s ease;
   }
   #form #contact .input-group input:hover {
     border: none;
     /* Removes all borders */
-    border-bottom: 2px solid var(--primary) !important;
+    border-bottom: 2px solid var(--colourc) !important;
     /* Adds only an underline */
     outline: none;
     /* Removes default browser focus outline */
   }
   #form #contact .input-group input:focus {
     border: none;
-    border-bottom: 2px solid var(--primary) !important;
+    border-bottom: 2px solid var(--colourc) !important;
     /* Adds only an underline */
     outline: none;
   }
@@ -95,13 +99,15 @@
     border: none;
     border-bottom: 1px solid #d4d4d4;
     font-size: 0.8em;
+    background: transparent;
     min-height: 10em;
     padding-top: 1em;
+    transition: .3s ease;
   }
   #form #contact .input-group textarea:hover {
     border: none;
     /* Removes all borders */
-    border-bottom: 2px solid var(--primary) !important;
+    border-bottom: 2px solid var(--colourc) !important;
     /* Adds only an underline */
     outline: none;
     /* Removes default browser focus outline */
@@ -109,85 +115,62 @@
   #form #contact .input-group textarea:focus {
     border: none;
     /* Removes all borders */
-    border-bottom: 2px solid var(--primary) !important;
+    border-bottom: 2px solid var(--colourc) !important;
     /* Adds only an underline */
     outline: none;
     /* Removes default browser focus outline */
   }
-  #form #contact .input-group ::-webkit-input-placeholder {
-    color: #d4d4d4;
-    font-family: "Roboto", sans-serif;
-  }
-  #form #contact .input-group :-ms-input-placeholder {
-    color: #d4d4d4;
-    font-family: "Roboto", sans-serif;
-  }
-  #form #contact .input-group ::-ms-input-placeholder {
-    color: #d4d4d4;
-    font-family: "Roboto", sans-serif;
-  }
   #form #contact .input-group ::placeholder {
-    color: #d4d4d4;
+    color: #b9b9b9;
     font-family: "Roboto", sans-serif;
   }
 }
 /* Mobile Landscape */
-@media only screen and (min-width: 568px) {
-  #form #contact {
-    max-width: 35em;
-  }
-}
 /* Tablet */
 @media only screen and (min-width: 48em) {
-  #form #contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  #form .contact-container .left-section {
+    max-width: none;
   }
-  #form #contact .input-group {
+  #form .contact-container .right-section #contact {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #form .contact-container .right-section #contact .input-group {
     width: 100%;
     margin-bottom: 2.5em;
     position: relative;
   }
-  #form #contact .input-group:nth-of-type(5) {
+  #form .contact-container .right-section #contact .input-group:nth-of-type(5) {
     width: 100%;
   }
-  #form #contact .input-group:last-of-type {
+  #form .contact-container .right-section #contact .input-group:last-of-type {
     width: 100%;
   }
-  #form #contact .input-group:hover .hover-box {
+  #form .contact-container .right-section #contact .input-group:hover .hover-box {
     height: 2.3em;
     border: 0.05em solid var(--primary);
     pointer-events: none;
   }
-  #form #contact .input-group:hover input[type="text"],
-  #form #contact .input-group:hover input[type="email"],
-  #form #contact .input-group:hover input[type="tel"],
-  #form #contact .input-group:hover input[type="url"],
-  #form #contact .input-group:hover textarea {
+  #form .contact-container .right-section #contact .input-group:hover input[type="text"],
+  #form .contact-container .right-section #contact .input-group:hover input[type="email"],
+  #form .contact-container .right-section #contact .input-group:hover input[type="tel"],
+  #form .contact-container .right-section #contact .input-group:hover input[type="url"],
+  #form .contact-container .right-section #contact .input-group:hover textarea {
     padding-left: 1em;
   }
-  #form #contact .input-group input[type="text"],
-  #form #contact .input-group input[type="email"],
-  #form #contact .input-group input[type="tel"],
-  #form #contact .input-group input[type="url"],
-  #form #contact .input-group textarea {
+  #form .contact-container .right-section #contact .input-group input[type="text"],
+  #form .contact-container .right-section #contact .input-group input[type="email"],
+  #form .contact-container .right-section #contact .input-group input[type="tel"],
+  #form .contact-container .right-section #contact .input-group input[type="url"],
+  #form .contact-container .right-section #contact .input-group textarea {
     border-bottom: none;
     position: relative;
-    -webkit-transition: padding .3s;
     transition: padding .3s;
     background: transparent;
   }
-  #form #contact .input-group .hover-box {
+  #form .contact-container .right-section #contact .input-group .hover-box {
     position: absolute;
     display: block;
     height: 0.05em;
@@ -198,43 +181,34 @@
     bottom: 0.05em;
     left: 0;
     z-index: 10;
-    -webkit-transition: height .9s, border .3s;
     transition: height .9s, border .3s;
     z-index: -1;
     height: auto !important;
     /* Prevents hover effect */
   }
-  #form #contact .textarea:hover .hover-box {
+  #form .contact-container .right-section #contact .input-group .textarea:hover .hover-box {
     height: auto !important;
     /* Prevents hover effect */
   }
-  #form #contact .form-submit {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  #form .contact-container .right-section #contact .input-group .form-submit {
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #form {
-    padding-top: 14em;
+    padding-top: 11em;
     padding-bottom: 0;
     margin: auto;
-    max-width: 1144px;
+    max-width: none;
   }
   #form .contact-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     font-size: 1.5vw;
     width: 100%;
-    max-width: 57.2em;
+    max-width: none;
   }
   #form .contact-container #left-section,
   #form .contact-container #right-section {

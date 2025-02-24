@@ -1,7 +1,14 @@
 /*-- -------------------------- -->
 <---         CORE STYLES        -->
 <--- -------------------------- -*/
-
+@font-face {
+	font-family: "Heading1";
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url('/fonts/MADEINFINITYBesidePersonalUse-Black.otf') format('opentype');
+	
+  }
 
 /* Montserrat variable font */
 @font-face {
@@ -73,11 +80,12 @@
 	}
 
 	main{
-		transition: filter 0.2s ease-in-out;
+		transition: filter .5s ease;
 	}
 
 	.darken{
-		filter: brightness(80%);
+		//filter: brightness(80%);
+		filter: blur(5px);
 	}
 	
 	:root {
@@ -89,6 +97,12 @@
 		--colour2: #365367;
 		--coloura: #f5f5f5;
 		--colourb: rgb(45, 41, 41);
+		/*--colourc: rgb(237,60,28);*/
+		--colourz: rgb(255, 119, 0);
+		--colourd: #d1d1d1;
+		--colourc: rgb(148, 99, 255);
+		--colourlp: rgb(172, 153, 214);
+		--colourlpp: rgb(172, 160, 198);
 	}
 	
 	body, html {
@@ -135,7 +149,7 @@
 	.fade-in {
 		opacity: 0;
 		//transform: translateY(20px); /* Start slightly lower */
-		transition: opacity 1.7s ease !important;
+		transition: opacity 2s ease !important;
 	}
 	
 	.fade-in.in-fade {
@@ -180,12 +194,14 @@
 		border-width: 2px;
 		border-style: solid;
 		padding: 10px 20px;
+		transition: .3s ease;
 
 		&:hover{
 			//border-color:   rgb(255, 230, 1);
 			//background-color: rgb(255, 230, 1);
-			border-color:   #ffaa01;
-			background-color:  #ffa201;
+			color: var(--colourc);
+			border-color:   var(--colourc);
+			//background-color: var(--colourc);
 		}
 	}
 	
@@ -232,8 +248,6 @@
 		//background-color: transparent;
 		cursor: pointer;
 	}
-	
-	
 	.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
 		background-color: #000;
 	}
@@ -283,7 +297,6 @@
 		bottom: -10/20em;
 		width: 20/20em;
 	}
-	
 	/* * Spring */
 	.hamburger--spring .hamburger-inner {
 		top: 2/20em;
@@ -365,8 +378,6 @@
 		border-width: 3px;
 		border-radius: 2px;
 		cursor: pointer !important;
-		
-		
 		.logo-text{
 			font-size: 22px;
 			line-height: 1;
@@ -374,13 +385,25 @@
 			font-family: "Heading";
 			font-weight: 900;
 		}
-	}
+		
+}
 	
 	/*-- -------------------------- -->
 	<---         NAVIGATION         -->
 	<--- -------------------------- -*/
 	
-	
+	.blur-bar {
+		display: none; // disabled 
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100px;
+		background: rgba(255, 255, 255, 0.2); /* Transparent background */
+		backdrop-filter: blur(10px); /* Blurs the background only */
+		-webkit-backdrop-filter: blur(10px); /* Safari support */
+		z-index: 100;
+	}
+
 	/* Hidden Elements */
 	.navbar-menu img,
 	.call-us,
@@ -446,6 +469,8 @@
 		background-color: var(--coloura); //background cirlce
 		border-radius: 90px;
 		padding: 12px;
+		transition: filter .3s ease;
+		
 	}
 	.hamburger-border{
 		border: #000;
@@ -476,7 +501,6 @@
 		margin-right: auto !important;
 		border-radius: 20px;
 		
-		
 	}
 	
 	.side-nav {
@@ -506,22 +530,26 @@
         a {
             text-decoration: none;
             padding: 5/20em 10/20em 5/20em 10/20em;
-            -webkit-transition: .3s ease-in-out;
-            -o-transition: .3s ease-in-out;
-            transition: .3s ease-in-out;
-            -webkit-transition-delay: .2s;
-                 -o-transition-delay: .2s;
-                    transition-delay: .2s;
+            -webkit-transition: .2s ease;
+            -o-transition: .2s ease;
+            transition: .2s ease;
+            //-webkit-transition-delay: .2s;
+            //     -o-transition-delay: .2s;
+            //        transition-delay: .2s;
             opacity: 0;
             visibility: hidden;
             font-family: 'body', sans-serif;
 			font-size: 20px;
+			&:hover{
+				color: var(--colourlp);
+			}	
         }
+
 	}
 	
 	#active-menu {
 		border-right: 4/20em solid var(--primary);
-		color: #555; // highlight color??
+		color: var(--colourc); // highlight color??
 	}
 }
 
@@ -619,12 +647,18 @@
                             font-size: 14px;
 							font-family: "Heading";
                             //line-height: 15/18;
+							transition: .3s ease;
+							&:hover{
+								//opacity: 0.6;
+								color: var(--colourc);
+							}
                         }
                     }
 					
                     h2 {
 						font-family: "heading";
-                        color: var(--coloura);
+                        //color: var(--coloura);
+						color: #888;
                         font-size: 14px;
                         line-height: 21/18;
                         margin-bottom: 18/18em;
@@ -771,7 +805,7 @@
 	.right-section {
 		.lists {
 			ul {
-				padding-left: 8em !important;
+				//padding-left: 6em !important;
 				//padding-right: 2em;
 			}
 		}
