@@ -5,7 +5,6 @@
 @media only screen and (min-width: 0em) {
   #left-section {
     padding-bottom: 2em;
-    max-width: 40em;
     margin: auto;
   }
   #left-section p {
@@ -16,20 +15,10 @@
     margin-bottom: 0.05555556em;
   }
   #form {
-    padding-top: 9em;
+    padding-top: 10em;
     width: 90%;
-    max-width: 40em;
     margin: auto;
     margin-bottom: -2em;
-  }
-  #form h2 {
-    font-family: "heading";
-    font-size: 2.2em;
-    line-height: 1.16666667;
-    color: var(--colourc);
-    font-weight: 500;
-    margin-bottom: 0.66666667em;
-    position: relative;
   }
   #form h2 .italic {
     font-family: "heading-italic";
@@ -128,9 +117,6 @@
 /* Mobile Landscape */
 /* Tablet */
 @media only screen and (min-width: 48em) {
-  #form .contact-container .left-section {
-    max-width: none;
-  }
   #form .contact-container .right-section #contact {
     display: flex;
     justify-content: space-between;
@@ -201,22 +187,24 @@
     padding-top: 11em;
     padding-bottom: 0;
     margin: auto;
-    max-width: none;
+    max-width: 1080px;
   }
   #form .contact-container {
+    padding-top: 3em;
     display: flex;
     justify-content: space-between;
     font-size: 1.5vw;
     width: 100%;
     max-width: none;
   }
-  #form .contact-container #left-section,
-  #form .contact-container #right-section {
-    width: 45%;
-    margin-left: 0;
-  }
   #form .contact-container #left-section {
+    width: 35%;
+    margin-left: 0;
     margin-top: 0;
+  }
+  #form .contact-container #right-section {
+    width: 60%;
+    margin-left: 0;
   }
   #form .contact-container #contact {
     margin-right: 0;
@@ -224,8 +212,9 @@
   }
 }
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1500px) {
   #form {
     font-size: inherit;
+    max-width: 1170px;
   }
 }

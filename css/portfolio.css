@@ -1,0 +1,88 @@
+/*-- -------------------------- -->
+<---           portfolio        -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #portfolio-section {
+    background-color: var(--coloura);
+    margin: auto;
+  }
+  #portfolio-section .portfolio-container {
+    padding-top: 10em;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 5em;
+  }
+  #portfolio-section .portfolio-container .images {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    overflow: hidden;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #portfolio-section .portfolio-container .images .image-box {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    background-color: var(--coloura);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 2em;
+  }
+  #portfolio-section .portfolio-container .images .image-box .image-wrapper {
+    overflow: hidden;
+  }
+  #portfolio-section .portfolio-container .images .image-box .image-wrapper .image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  #portfolio-section .portfolio-container .images .image-box .image-wrapper .image:hover {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+  #portfolio-section .portfolio-container .images .image-box .image-heading {
+    font-family: "heading";
+    padding-top: 1em;
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+    transition: opacity 1.7s ease !important;
+  }
+  #portfolio-section .portfolio-container .images .image-box .image-text {
+    font-family: "body";
+    color: #666;
+    padding-top: 1em;
+    font-weight: 300;
+    padding-bottom: 1em;
+  }
+}
+/* Tablet */
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #portfolio-section {
+    max-width: 1200px;
+  }
+  #portfolio-section .portfolio-container .images {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow: hidden;
+    padding-bottom: 2em;
+  }
+  #portfolio-section .portfolio-container .images .image-box {
+    width: 47% !important;
+    box-sizing: border-box;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1500px) {
+  #portfolio-section {
+    max-width: 1300px;
+  }
+}

@@ -87,9 +87,10 @@ main {
   #landing-section .landing-text {
     display: flex;
     justify-content: space-between;
+    max-width: 1080px;
   }
   #landing-section .landing-text .line-1 {
-    font-size: clamp(16px, 5vw, 72px);
+    font-size: clamp(16px, 5vw, 60px);
     width: 58%;
   }
   #landing-section .landing-text .line-2-wrapper {
@@ -105,30 +106,31 @@ main {
   }
 }
 /* Large Desktop */
+@media only screen and (min-width: 1500px) {
+  #landing-section .landing-text {
+    max-width: 1170px;
+  }
+}
 /*-- -------------------------- -->
 <---           About            -->
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #about-section {
+    padding-top: 3em;
     background-color: var(--coloura);
-    padding-bottom: 4em;
   }
   #about-section .about-container {
     width: 90%;
     margin: auto;
   }
-  #about-section .about-container .about-heading {
-    padding-top: 3em;
-    opacity: 0;
-    transition: opacity 2s ease;
-  }
-  #about-section .about-container .about-heading.text-appear {
-    opacity: 1;
+  #about-section .about-container .about-columns .about-image {
+    width: 90%;
+    height: auto;
+    display: none;
   }
   #about-section .about-container .about-columns .about-text {
     font-family: "heading";
-    padding-top: 1em;
     padding-bottom: 3em;
     opacity: 0;
     transition: opacity 2s ease, transform 1.5s ease;
@@ -142,7 +144,7 @@ main {
     color: var(--colourc);
     font-family: "heading-italic";
     font-weight: 400;
-    text-align: center;
+    text-align: left;
     opacity: 0;
     transition: opacity 2s ease, transform 1.5s ease;
     transform: translateY(50%);
@@ -153,45 +155,42 @@ main {
   }
   #about-section .about-container .center-button {
     padding-top: 1em;
-    text-align: center;
+    text-align: left;
   }
 }
 /* Tablet */
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
-  #about-section .about-container .about-heading {
-    text-align: center;
-    padding-bottom: 1em;
-    padding-top: 3em;
+  #about-section {
+    max-width: 1200px;
   }
   #about-section .about-container .about-columns {
+    padding-top: 2em;
     display: flex;
     justify-content: space-between;
   }
-  #about-section .about-container .about-columns .about-text {
-    width: 45%;
+  #about-section .about-container .about-columns .about-image {
+    width: 90%;
+    height: auto;
+    display: block;
   }
   #about-section .about-container .about-columns .tagline-heading {
-    width: 45%;
     align-self: center;
   }
 }
 /* Large Desktop */
+@media only screen and (min-width: 1500px) {
+  #about-section {
+    max-width: 1300px;
+  }
+}
 /*-- -------------------------- -->
 <---           Services         -->
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0em) {
-  #service-section,
-  #portfolio-section {
-    transition: background-color 0.3s ease;
-  }
-  #service-section.in-view,
-  #portfolio-section.in-view {
-    background-color: var(--colourb);
-  }
   #service-section {
-    padding-top: 5em;
+    padding-top: 2em;
     align-items: center;
     position: relative;
   }
@@ -202,18 +201,20 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/images/bg2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
   }
   #service-section .service-container {
-    max-width: 90%;
+    width: 90%;
     margin: auto;
+  }
+  #service-section .service-container .services-columns {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1em;
+    padding-top: 2em;
   }
   #service-section .service-container .left-services {
     width: 40%;
@@ -332,14 +333,24 @@ main {
     opacity: 1;
   }
   #service-section .center-button {
-    text-align: center;
+    text-align: left;
     padding-top: 2em;
     padding-bottom: 2em;
   }
 }
 /* Tablet */
 /* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #service-section {
+    max-width: 1200px;
+  }
+}
 /* Large Desktop */
+@media only screen and (min-width: 1500px) {
+  #service-section {
+    max-width: 1300px;
+  }
+}
 /*-- -------------------------- -->
 <---           portfolio        -->
 <--- -------------------------- -*/
@@ -350,31 +361,19 @@ main {
   }
   #portfolio-section .portfolio-container {
     width: 90%;
-    text-align: center;
+    margin: auto;
+    padding-bottom: 2em;
+  }
+  #portfolio-section .portfolio-container .images {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: auto;
     padding-top: 2em;
     padding-bottom: 2em;
     overflow: hidden;
     height: auto;
-  }
-  #portfolio-section .portfolio-container h2 {
-    font-size: 1.6em;
-    font-weight: 700;
-    font-family: "heading";
-    transition: 0.3s ease, opacity 1.7s ease;
-  }
-  #portfolio-section .portfolio-container h2.in-view {
-    color: var(--colourc);
-  }
-  #portfolio-section .portfolio-container .images {
-    display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    padding-bottom: 2em;
+    justify-content: space-between;
   }
   #portfolio-section .portfolio-container .images .image-box {
     width: 100%;
@@ -383,9 +382,7 @@ main {
     background-color: var(--coloura);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-  }
-  #portfolio-section .portfolio-container .images .image-box.in-view {
-    background-color: var(--colourb);
+    padding-bottom: 2em;
   }
   #portfolio-section .portfolio-container .images .image-box .image-wrapper {
     overflow: hidden;
@@ -395,9 +392,7 @@ main {
     height: auto;
     display: block;
     object-fit: cover;
-    transition: opacity 1s ease-in-out;
-    transition: transform 1s ease-in-out;
-    transform: scale(1.1);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   }
   #portfolio-section .portfolio-container .images .image-box .image-wrapper .image:hover {
     opacity: 0.6;
@@ -408,49 +403,38 @@ main {
     padding-top: 1em;
     font-weight: 600;
     transition: transform 0.3s ease-in-out;
-    transition: background-color 0.3s ease;
     transition: opacity 1.7s ease !important;
-  }
-  #portfolio-section .portfolio-container .images .image-box .image-heading.in-view {
-    color: var(--colourc);
   }
   #portfolio-section .portfolio-container .images .image-box .image-text {
     font-family: "body";
+    color: #666;
     padding-top: 1em;
     font-weight: 300;
     padding-bottom: 1em;
-    transition: background-color 0.3s ease;
-  }
-  #portfolio-section .portfolio-container .images .image-box .image-text.in-view {
-    color: white;
   }
 }
 /* Tablet */
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
-  .portfolio-container {
-    text-align: center;
+  #portfolio-section {
+    max-width: 1200px;
+  }
+  #portfolio-section .portfolio-container .images {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-    padding-bottom: 2em;
+    justify-content: space-between;
+    flex-direction: row;
     overflow: hidden;
-  }
-  .portfolio-container .images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding-bottom: 2em;
   }
-  .portfolio-container .images .image-box {
+  #portfolio-section .portfolio-container .images .image-box {
     width: 47% !important;
+    box-sizing: border-box;
   }
 }
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  #portfolio-section .portfolio-container {
-    max-width: 1500px;
+@media only screen and (min-width: 1500px) {
+  #portfolio-section {
+    max-width: 1300px;
   }
 }
 /*-- -------------------------- -->
@@ -458,35 +442,12 @@ main {
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0em) {
-  #contact-section {
-    position: relative;
-    /* Ensure ::before is positioned relative to this */
-    align-items: center;
-    /* background-color: var(--colourd); */
-  }
-  #contact-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/bg2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
   #contact-section .section-container {
-    text-align: center;
-    max-width: 90%;
+    width: 90%;
     margin: auto;
   }
   #contact-section .section-container h2 {
-    padding-top: 4em;
     padding-bottom: 1em;
-    font-size: 1.5em;
-    color: var(--colourc);
     font-family: "heading";
   }
   #contact-section .section-container p {
@@ -501,17 +462,14 @@ main {
 /* Tablet */
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
-  #contact-section .section-container h2 {
-    font-size: 2em;
-  }
-  #contact-section .section-container p {
-    font-size: 1em;
+  #contact-section {
+    max-width: 1200px;
   }
 }
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  #contact-section .contact-container {
-    max-width: 1500px;
+@media only screen and (min-width: 1500px) {
+  #contact-section {
+    max-width: 1300px;
   }
 }
 /*-- -------------------------- -->

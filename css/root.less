@@ -37,6 +37,9 @@
 	src: url('/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
+body {
+	cursor: url('/images/c19.png'), auto;
+}
 
 @media screen and (min-width: 0px) {
 
@@ -95,9 +98,9 @@
 		--shade: #49b5b0;
 		--colour1: #F9F4E6;
 		--colour2: #365367;
+		
 		--coloura: #f5f5f5;
-		--colourb: rgb(45, 41, 41);
-		/*--colourc: rgb(237,60,28);*/
+		--colourb: rgb(33, 30, 31);
 		--colourz: rgb(255, 119, 0);
 		--colourd: #d1d1d1;
 		--colourc: rgb(148, 99, 255);
@@ -117,7 +120,8 @@
 		transition: opacity 0.3s ease-in-out;
 		&:hover{
 			//opacity: 0.7;
-			cursor: pointer;
+			//cursor: pointer;
+			cursor: url('/images/c.png'), auto;
 		}
 	}
 	
@@ -199,25 +203,29 @@
 		&:hover{
 			//border-color:   rgb(255, 230, 1);
 			//background-color: rgb(255, 230, 1);
-			color: var(--colourc);
-			border-color:   var(--colourc);
+			//color: var(--colourc);
+			//border-color:   var(--colourc);
 			//background-color: var(--colourc);
+
+			color: white;
+			//border-color:   var(--colourc);
+			background-color: black;
 		}
 	}
 	
 	button:hover {
-		cursor: pointer;
+		//cursor: pointer;
+		cursor: url('/images/c.png'), auto;
 		-webkit-transition: .2s ease;
 		-o-transition: .2s ease;
 		transition: .2s ease;
-	}
-	
-	
+	}	
 	
 	.hamburger {
 		padding: 0;
 		display: inline-block;
-		cursor: pointer;
+		//cursor: pointer;
+		cursor: url('/images/c.png'), auto;
 		-webkit-transition-property: opacity, -webkit-filter;
 		transition-property: opacity, -webkit-filter;
 		-o-transition-property: opacity, filter;
@@ -242,11 +250,13 @@
 	}
 	.hamburger:hover {
 		//filter: brightness(0.94);
-		cursor: pointer;
+		//cursor: pointer;
+		cursor: url('/images/c.png'), auto;
 	}
 	.hamburger.is-active:hover {
 		//background-color: transparent;
-		cursor: pointer;
+		//cursor: pointer;
+		cursor: url('/images/c.png'), auto;
 	}
 	.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
 		background-color: #000;
@@ -377,7 +387,8 @@
 		border-style: solid;
 		border-width: 3px;
 		border-radius: 2px;
-		cursor: pointer !important;
+		//cursor: pointer !important;
+		cursor: url('/images/c.png'), auto !important;
 		.logo-text{
 			font-size: 22px;
 			line-height: 1;
@@ -386,7 +397,48 @@
 			font-weight: 900;
 		}
 		
-}
+	}
+	.section-heading-1{
+		color: var(--colourc);
+		font-family: "heading";
+		font-weight: 400;
+		font-size: 14px;
+		letter-spacing: 2px;
+		padding-top: 1em;
+		opacity:0;
+		transition: opacity 2s ease, transform 1.5s ease;
+		transform: translateY(100%);
+		&.text-appear{
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+	.section-heading-2{
+		color: #000;
+		font-family: "heading";
+		font-weight: 700;
+		font-size: 36px;
+		opacity:0;
+		transition: opacity 2s ease, transform 1.5s ease;
+		transform: translateY(50%);
+		&.text-appear{
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+	.section-heading-3{
+		color: #000;
+		font-family: "heading";
+		font-weight: 400;
+		font-size: 28px;
+		opacity:0;
+		transition: opacity 2s ease, transform 1.5s ease;
+		transform: translateY(50%);
+		&.text-appear{
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
 	
 	/*-- -------------------------- -->
 	<---         NAVIGATION         -->
@@ -551,6 +603,12 @@
 		border-right: 4/20em solid var(--primary);
 		color: var(--colourc); // highlight color??
 	}
+	.page-break{
+		height: 1px;
+		background-color: #999;
+		width: 60%;
+		margin-left: auto;
+	}
 }
 
 /* Ipad Pro */
@@ -599,6 +657,7 @@
 
     #footer {
         background: var(--colourb);
+		//background: black;
         padding: 62/20em 0 76/20em;
 		padding-bottom: 1em;
 		color: white; //text color
@@ -770,12 +829,11 @@
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
 	#footer{
-		//max-width: 1300px;
-		.container{
-			max-width: 90%;
-		}
-
-	}
+        .container{
+            max-width: 1080px;
+        }
+        
+    }
 
 	.left-section{
 		//align-text: left;
@@ -798,17 +856,11 @@
 
 
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1500px) {
 	#footer{
-		//max-width: 1500px;
-	}
-	.right-section {
-		.lists {
-			ul {
-				//padding-left: 6em !important;
-				//padding-right: 2em;
-			}
-		}
-	}
-
+        .container{
+            max-width: 1170px;
+        }
+        
+    }
 }

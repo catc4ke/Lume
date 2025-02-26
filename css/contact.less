@@ -8,12 +8,8 @@
 @media only screen and (min-width: 0em) {
 
     #left-section {
-        //padding-top: 80/20em;
         padding-bottom: 2em;
-        //width: 96%;
-        max-width: 800/20em;
         margin: auto;
-
         p {
             font-size: 30/20em;
             font-family: "Heading";
@@ -23,19 +19,13 @@
         }
     }
     #form {
-        padding-top: 9em;
+        padding-top: 10em;
         width: 90%;
-        max-width: 800/20em;
+        //max-width: 800/20em;
         margin: auto;
         margin-bottom: -2em ;
         h2 {
-            font-family: "heading";
-            font-size: 44/20em;
-            line-height: 42/36;
-            color: var(--colourc);
-            font-weight: 500;
-            margin-bottom: 24/36em;
-            position: relative;
+            
             .italic{
                 font-family: "heading-italic";
             }  
@@ -60,6 +50,9 @@
             &:hover{
                 color: var(--colourc);
             }   
+        }
+        .contact-container{
+            //padding-top: 3em;
         }
         #contact {
             margin-bottom: 100/20em;
@@ -128,25 +121,12 @@
 /* Mobile Landscape */
 @media only screen and (min-width: 568px) {
 
-    #form {
-        #contact{
-            //max-width: 700/20em;//check this
-            //max-width: none;
-        }
-        
-    }
 }
 
 /* Tablet */
 @media only screen and (min-width: 48em) {
-
     #form {
-        //max-width: none;
         .contact-container{
-            .left-section{
-                max-width: none;
-
-            }
             .right-section{
                 #contact {
                     display: flex;
@@ -227,9 +207,10 @@
         padding-top:11em;
         padding-bottom: 0;
         margin: auto;
-        //max-width: 1144px;
-        max-width: none;
+        max-width: 1080px;
+        
         .contact-container {
+            padding-top: 3em;
             display: flex;
             justify-content: space-between;
             font-size: 1.5vw;
@@ -237,14 +218,15 @@
             //max-width: 1144px;
             max-width: none;
             
-            #left-section, #right-section {
-                width: 45%;
+            #left-section {
+                width: 35%;
                 margin-left: 0;
-            }
-            #left-section{
                 margin-top: 0;
             }
-
+            #right-section {
+                width: 60%;
+                margin-left: 0;
+            }
             #contact {
                 margin-right: 0;
                 max-width: none;
@@ -254,9 +236,10 @@
 }
 
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1500px) {
 
     #form {
         font-size: inherit;
+        max-width: 1170px;
     }
 }

@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="canonical" href="">
+    <link rel="canonical" href="https://www.lumewebdesign.com.au/index.html">
 
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!--Social Media Display-->
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
+    <meta property="og:title" content="Lume Web Design"/>
+    <meta property="og:description" content="We create beautiful, responsive websites"/>
     <meta property="og:type" content="website" />
-    <meta property="og:url" content=""/>
+    <meta property="og:url" content="https://www.lumewebdesign.com.au"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:secure_url" content=""/>
 
     <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/icon.svg">
-    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/icon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/images/logo1.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/images/logo1.svg">
 
     <!-- PNG Fallback (For older browsers) -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/android-chrome-512x512.png">
+    <link rel="icon" type="image/svg" sizes="32x32" href="/images/logo1.svg">
+    <link rel="icon" type="image/svg" sizes="16x16" href="/images/logo1.svg">
 
     <link rel="manifest" href="/site.webmanifest">
 
@@ -34,68 +34,57 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/root.css">
-    <link rel="stylesheet" href="/css/local.css">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/dark-root-styles.css">
-
-    <title>Lume Web Design | Bellingen NSW</title>
+    <link rel="stylesheet" href="/css/services.css">
+    <title>Lume Web Design</title>
 </head>
 <body>
-
     <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main</a>
-
+    <!-- ============================================ -->
+    <!--                   NAVIGATION                 -->
+    <!-- ============================================ -->
     <header>
-
-        <!-- Mobile Nav Strip -->
-        <div class="mobile-wrapper">
-            <!-- <div class="mobile-nav container mobile-nav-container">-->
-            <div class="mobile-nav">
-                <a href="index.html" id="mobile-logo">
-                    <span class="light">Lume</span>
-                    <img class="dark" id="mobile-logo" src="/images/logo-white.svg" alt="mobile_company_logo" width="110" height="32">
-                </a>
-                <!-- Hamburger Menu -->
-                <button aria-label="open the menu" id="menu-button" class="hamburger hamburger--spring" onclick="toggleNav()" type="button">
-                    <span aria-hidden="true" class="hamburger-box">
-                        <span aria-hidden="true" class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-        </div>
-
-        <!-- ============================================ -->
-        <!--                   NAVIGATION                 -->
-        <!-- ============================================ -->
-
-        <nav>
-            <div class="navbar-menu">
-                <div id="side-menu" class=" side-nav">
-                    <a class="nav-logo" href="/index.html">
-                        <img class="light" aria-hidden="true" decoding="async" src="images/logo.svg" alt="compnay logo" height="80">
-                        <img class="dark" aria-hidden="true" decoding="async" src="images/logo-white.svg" alt="compnay logo" height="80">
-                    </a>
-                    <ul id="on-top" class="navbar-links">
-                        <li class="nav-li"><a id="active-menu" href="index.html">Home</a></li>
-                        <li class="nav-li"><a class="link" href="/about.html">About</a></li>
-                        <li class="nav-li"><a class="link" href="/services.html">Services</a></li>
-                        <li class="nav-li"><a class="link" href="/portfolio.html">Portfolio</a></li>
-                        <li class="nav-li"><a class="link" href="/contact.html">Contact</a></li>
-                    </ul>
+            <div class="blur-bar"></div>    
+            <!-- Logo -->
+            <a href="/index.html">
+                <div class="logo-wrapper fade-in">
+                    <span class="logo-text">LU</span>
+                    <span class="logo-text">ME</span>
                 </div>
-                <!--
-                <button class="dark-mode-button top-dark-mode-button" aria-label="dark mode toggle">
-                    <img class="moon" aria-hidden="true" src="/images/moon.svg" alt="" width="24" height="24">
-                    <img class="sun" aria-hidden="true" src="/images/sun.svg" alt="" width="24" height="24">
-                </button>-->
+            </a>
+            <!-- Mobile Nav Strip -->
+            <div class="mobile-wrapper fade-in">
+                <div class="mobile-nav">
+                    <!-- Hamburger Menu -->
+                    <button aria-label="open the menu" id="menu-button" class="hamburger hamburger--spring hamburger-border" onclick="toggleNav()" type="button">
+                        <span aria-hidden="true" class="hamburger-box">
+                            <span aria-hidden="true" class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
             </div>
-        </nav>
+            <nav>
+                <div class="navbar-menu">
+                    <div id="side-menu" class=" side-nav">
+                        <a class="nav-logo" href="/index.html">
+                        <!-- insert logo here-->
+                        </a>
+                        <ul id="on-top" class="navbar-links">
+                            <li class="nav-li"><a class="link" href="index.html">Home</a></li>
+                            <li class="nav-li"><a class="link" href="/about.html">About</a></li>
+                            <li class="nav-li"><a id="active-menu" href="/services.html">Services</a></li>
+                            <li class="nav-li"><a class="link" href="/portfolio.html">Portfolio</a></li>
+                            <li class="nav-li"><a class="link" href="/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
     </header>
+<main id="main">
         
-    <main id="main">
-    <!-- ============================================ -->
-    <!--                     Section                  -->
-    <!-- ============================================ -->
-    
+
+
+</main>
 
     <!-- ============================================ -->
     <!--                     FOOTER                   -->
@@ -103,22 +92,22 @@
 
     <footer id="footer">
         <div class="container">
+            
             <div class="left-section">
-                <a class="logo" href="/index.html"><img loading="lazy" decoding="async" src="/images/logo.svg" alt="logo" width="293" height="91"></a>
-                
+                <h3 class="fade-in">Lume Web Design</h3>    
             </div>
             <div class="right-section">
                 <div class="lists">
-                    <ul></ul>
-                    <ul>
+                    
+                    <ul class="fade-in">
                         <li><h2>Explore</h2></li>
                         <li><a href="/index.html">Home</a></li>
-                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/about.html">About</a></li>
                         <li><a href="/contact.html">Services</a></li>
                         <li><a href="/portfolio.html">Portfolio</a></li>
                         <li><a href="/contact.html">Contact</a></li>
                     </ul>
-                    <ul>
+                    <ul  class="fade-in">
                         <li><h2>Connect</h2></li>
                         <li><a href="tel:0411 138 005">+61 411 138 005</a></li>
                         <li><a href="mailto:julian@lumewebdesign.com.au">julian@lumewebdesign.com.au</a></li>
@@ -148,6 +137,9 @@
         }
     </script>
 
-    <script defer src="/app.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/fade-in.js"></script>
+    <script defer src="js/text-appear.js"></script>
+    
 </body>
 </html>

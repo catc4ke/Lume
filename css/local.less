@@ -43,9 +43,7 @@ main {
             //display: flex;
             margin: auto;
             padding-top: 23vh;
-            padding-bottom: 2vh;
-            
-            
+            padding-bottom: 2vh;            
             .line-1{
                 text-align: left;
                 font-family: "Heading";
@@ -65,8 +63,6 @@ main {
                 }
             }
             .line-2-wrapper{
-                
-                
                 .line-2{
                     width: 80%;
                     max-width: 400px;
@@ -88,12 +84,8 @@ main {
             .center-button{
                 text-align: center;
                 padding-top: 7vh;
-                //padding-bottom: em;
             }
-
-
         }
-        
     }
 }
 
@@ -101,61 +93,52 @@ main {
 @media only screen and (min-width: 48em) {
     #landing-section{
         .landing-text{
-            
             .line-1{
                 font-size: 60px;
                 max-width: 735px;
-                
             }
             .line-2{
                 font-size: 22px !important;
-                
             }
             .center-button{
-                //text-align: left;
-                
-                
+                 
             }
         }
     }
-    
-    
 }
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
-    #landing-section{
-            
+    #landing-section{  
         .landing-text{
                 display: flex;
                 justify-content: space-between;
+                max-width: 1080px;
             .line-1{
-                font-size: clamp(16px, 5vw, 72px);
+                font-size: clamp(16px, 5vw, 60px);
                 width:58%;
             }
             .line-2-wrapper{
                 width: 38%;
                 max-width: none;   
                 .line-2{
-                    
                     font-size: 24px !important;
-                    
                 }
                 .center-button{   
                     padding-top: 5vw;     
                     text-align: left;
                 }
             }
-            
         }
     }
 }
 
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1500px) {
     #landing-section{
             
         .landing-text{
+            max-width: 1170px;
                 
             .line-1{
                 //font-size: 5vw !important;
@@ -177,24 +160,24 @@ main {
 /* Mobile */
 @media only screen and (min-width: 0em) {
     #about-section{
+        padding-top: 3em;
         background-color: var(--coloura);
-        padding-bottom: 4em;
+        
         .about-container{
             width: 90%;
             margin: auto;
             //overflow: hidden;
-            .about-heading{
-                padding-top: 3em;
-                opacity:0;
-                transition: opacity 2s ease;
-                &.text-appear{
-                    opacity: 1;
-                }
-            }
+            
             .about-columns{
+                
+                .about-image{
+                    width: 90%;
+                    height: auto;
+                    display: none;
+                }
                 .about-text{
                     font-family: "heading";
-                    padding-top: 1em;
+                    //padding-top: 1em;
                     padding-bottom: 3em;
                     opacity:0;
                     transition: opacity 2s ease, transform 1.5s ease;
@@ -208,7 +191,7 @@ main {
                     color: var(--colourc);
                     font-family: "heading-italic";
                     font-weight: 400;
-                    text-align: center;
+                    text-align: left;
                     //padding-bottom: 1em;
                     opacity:0;
                     transition: opacity 2s ease, transform 1.5s ease;
@@ -222,7 +205,7 @@ main {
             }
             .center-button{
                 padding-top: 1em;
-                text-align: center;
+                text-align: left;
             }
         }
 
@@ -237,20 +220,22 @@ main {
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
     #about-section{
+        max-width: 1200px;
         .about-container{
-            .about-heading{
-                text-align: center;
-                padding-bottom: 1em;
-                padding-top: 3em;
-            }
             .about-columns{
+                padding-top: 2em;
                 display: flex;
                 justify-content: space-between;
+                .about-image{
+                    width: 90%;
+                    height: auto;
+                    display: block;
+                }
                 .about-text{
-                    width: 45%;
+                    //width: 60%;
                 }
                 .tagline-heading{
-                    width: 45%;
+                    //width: 60%;
                     align-self: center;
                 }
 
@@ -260,7 +245,10 @@ main {
 }
 
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1500px) {
+    #about-section{
+        max-width: 1300px;
+    }
 
 }
 
@@ -269,17 +257,9 @@ main {
 <--- -------------------------- -*/
 
 /* Mobile */
-@media only screen and (min-width: 0em) {
-    #service-section, #portfolio-section {
-        transition: background-color .3s ease;
-    }
-    
-    #service-section.in-view, #portfolio-section.in-view {
-        background-color: var(--colourb);
-    }
-    
+@media only screen and (min-width: 0em) { 
     #service-section{
-        padding-top: 5em;
+        padding-top: 2em;
         align-items: center;
         //margin: auto;
         //background-color: var(--colourd);
@@ -291,7 +271,7 @@ main {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/images/bg2.jpg');
+            //background-image: url('/images/bg2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -301,13 +281,15 @@ main {
         
         
         .service-container{
-            max-width: 90%;
+            width: 90%;
             margin: auto;
-            //background-color: var(--coloura);
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 1em;
-            
+            .services-columns{
+                //background-color: var(--coloura);
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 1em;
+                padding-top: 2em;
+            }
             .left-services{
                 width: 40%;
                 overflow: hidden;
@@ -431,7 +413,7 @@ main {
             }
         }
         .center-button{
-            text-align: center;
+            text-align: left;
             padding-top: 2em;
             padding-bottom: 2em;
             .text-appear{
@@ -451,12 +433,16 @@ main {
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
-
+    #service-section{
+        max-width: 1200px;    
+    }
 }
 
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
-
+@media only screen and (min-width: 1500px) {
+    #service-section{
+        max-width: 1300px;    
+    }
 }
 
 /*-- -------------------------- -->
@@ -467,50 +453,32 @@ main {
 @media only screen and (min-width: 0em) {
     #portfolio-section{    
         background-color: var(--coloura);
-    
         .portfolio-container{
             width: 90%;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
             margin: auto;
-            padding-top: 2em;
             padding-bottom: 2em;
-            overflow: hidden;
-            height:auto;
             
-            
-            h2{
-                font-size: 32/20em;
-                font-weight: 700;
-                //color: white;
-                font-family: "heading";
-                transition: 0.3s ease, opacity 1.7s ease;
-                &.in-view{
-                    color: var(--colourc);
-                }
-            }
             
             .images{
                 display: flex;
-                flex-wrap: wrap; // Ensures images wrap on smaller screens
-                gap: 40px; // Adds spacing between image boxes
-                justify-content: center; // Centers the images
+                align-items: center;
+                flex-direction: column;
+                padding-top: 2em;
                 padding-bottom: 2em;
+                overflow: hidden;
+                height:auto;
+                flex-wrap: wrap; // Ensures images wrap on smaller screens
+                justify-content: space-between;
+                //padding-bottom: 3em;
     
                 .image-box{
                     width: 100%; // Makes it responsive, adjusts as needed
-                    //height: 49vw;
                     text-align: left;
                     overflow: hidden;
                     background-color: var(--coloura);
                     border-top-left-radius: 20px;
                     border-top-right-radius: 20px;
-                    &.in-view{
-                        background-color: var(--colourb);
-                    }            
-                    
+                    padding-bottom: 2em;            
                     .image-wrapper{
                         overflow: hidden;
                         .image{
@@ -518,9 +486,8 @@ main {
                             height: auto; // Maintains aspect ratio
                             display: block; // Removes bottom spacing from inline images
                             object-fit: cover; // Ensures it fills properly without stretching
-                            transition: opacity 1s ease-in-out;
-                            transition: transform 1s ease-in-out;
-                            transform: scale(1.1);
+                            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+                            //transform: scale(1.1);
                             &:hover {
                                 opacity: 0.6;
                                 transform: scale(1.20);
@@ -532,22 +499,14 @@ main {
                         padding-top: 1em;
                         font-weight: 600;
                         transition: transform 0.3s ease-in-out;
-                        transition: background-color 0.3s ease;
                         transition: opacity 1.7s ease !important;
-                        &.in-view{
-                            //color: white;
-                            color: var(--colourc);
-                        }
                     }
                     .image-text{
                         font-family: "body";
+                        color: #666;
                         padding-top: 1em;
                         font-weight: 300;
                         padding-bottom: 1em;
-                        transition: background-color 0.3s ease;
-                        &.in-view{
-                            color: white;
-                        }   
                     }   
                 }
             }
@@ -562,47 +521,33 @@ main {
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
-    
-    .portfolio-container{
-        text-align: center;
-        //max-width: 1800/20em !important;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: auto;
-        padding-bottom: 2em;
-        overflow: hidden;
-
-        .images{
-            display: flex;
-            flex-wrap: wrap; // Ensures images wrap on smaller screens
-            justify-content: center; // Centers the images
-            //max-width: 1144/20em;
-            padding-bottom: 2em;
-
-            .image-box{
-                width: 47% !important; // Makes it responsive, adjusts as needed
-                
-                .image{
-                
-                }
-                .image-heading{
-
-                }
-                .image-text{
-                    
-
+    #portfolio-section{
+        max-width: 1200px;
+        .portfolio-container{
+               
+            .images{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;                
+                padding-bottom: 2em;
+                overflow: hidden;
+                padding-bottom: 2em;
+                .image-box{
+                    width: 47% !important; // Makes it responsive, adjusts as needed
+                    box-sizing: border-box;
                 }
             }
         }
     }
+    
 }
 
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1500px) {
     #portfolio-section{
+        max-width: 1300px; 
         .portfolio-container{
-            max-width: 1500px; 
+            
         }
     }
 }
@@ -613,55 +558,25 @@ main {
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
-    
-
     #contact-section {
-        position: relative; /* Ensure ::before is positioned relative to this */
-        align-items: center;
-        /* background-color: var(--colourd); */
-    
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('/images/bg2.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            //opacity: 0.2;
-            z-index: -1;
-        }
-    
         .section-container{
-            text-align: center;
-            //max-width: 1144/20em;
-            max-width: 90%;
+            width: 90%;
             margin: auto;
-            
             h2{
-                padding-top: 4em;
                 padding-bottom: 1em;
-                font-size: 30/20em;
-                color: var(--colourc);
                 font-family: "heading";
             }
             p{
                 padding-bottom: 4em;
                 font-family: "heading";
                 color: black;
-
             }
             form{
                 padding-bottom: 2em;
             }
         }
-
     }
 }
-
 /* Tablet */
 @media only screen and (min-width: 48em) {
 
@@ -669,24 +584,15 @@ main {
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
-#contact-section{
-    .section-container{
-        h2{
-            font-size: 40/20em;
-        }
-        p{
-            font-size: 20/20em;
-        }
+    #contact-section{
+        max-width: 1200px;
     }
-}
 }
 
 /* Large Desktop */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1500px) {
     #contact-section{
-        .contact-container{
-            max-width: 1500px; 
-        }
+        max-width: 1300px; 
     }
 }
 
@@ -707,6 +613,7 @@ main {
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
+
 
 }
 

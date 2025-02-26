@@ -1,0 +1,108 @@
+/*-- -------------------------- -->
+<---           portfolio        -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    #portfolio-section{    
+        background-color: var(--coloura);
+        margin: auto;
+        .portfolio-container{
+            padding-top: 10em;
+            width: 90%;
+            margin: auto;
+            padding-bottom: 5em;
+            
+            
+            .images{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 2em;
+                padding-bottom: 2em;
+                overflow: hidden;
+                height:auto;
+                flex-wrap: wrap; // Ensures images wrap on smaller screens
+                justify-content: space-between;
+                //padding-bottom: 3em;
+    
+                .image-box{
+                    width: 100%; // Makes it responsive, adjusts as needed
+                    text-align: left;
+                    overflow: hidden;
+                    background-color: var(--coloura);
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    padding-bottom: 2em;            
+                    .image-wrapper{
+                        overflow: hidden;
+                        .image{
+                            width: 100%; // Makes the image scale with the container
+                            height: auto; // Maintains aspect ratio
+                            display: block; // Removes bottom spacing from inline images
+                            object-fit: cover; // Ensures it fills properly without stretching
+                            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+                            //transform: scale(1.1);
+                            &:hover {
+                                opacity: 0.6;
+                                transform: scale(1.20);
+                            }    
+                        }
+                    }
+                    .image-heading{
+                        font-family: "heading";   
+                        padding-top: 1em;
+                        font-weight: 600;
+                        transition: transform 0.3s ease-in-out;
+                        transition: opacity 1.7s ease !important;
+                    }
+                    .image-text{
+                        font-family: "body";
+                        color: #666;
+                        padding-top: 1em;
+                        font-weight: 300;
+                        padding-bottom: 1em;
+                    }   
+                }
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+    #portfolio-section{
+        max-width: 1200px;
+        .portfolio-container{
+               
+            .images{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;                
+                padding-bottom: 2em;
+                overflow: hidden;
+                padding-bottom: 2em;
+                .image-box{
+                    width: 47% !important; // Makes it responsive, adjusts as needed
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1500px) {
+    #portfolio-section{
+        max-width: 1300px; 
+        .portfolio-container{
+            
+        }
+    }
+}
