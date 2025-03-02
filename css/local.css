@@ -22,7 +22,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/images/bg.jpg');
+    background-image: url('/images/bg1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -189,165 +189,94 @@ main {
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0em) {
-  #service-section {
-    padding-top: 2em;
-    align-items: center;
-    position: relative;
-  }
-  #service-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
   #service-section .service-container {
     width: 90%;
     margin: auto;
   }
-  #service-section .service-container .services-columns {
+  #service-section .service-container .services-group {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 1em;
-    padding-top: 2em;
   }
-  #service-section .service-container .left-services {
-    width: 40%;
-    overflow: hidden;
-  }
-  #service-section .service-container .left-services .service {
-    padding-bottom: 8em;
-    overflow: hidden;
-  }
-  #service-section .service-container .left-services .service .line-break {
-    width: 100%;
-    background-color: #000;
-    height: 1.5px;
-    border-radius: 5px;
-    margin-top: .4em;
-    margin-bottom: .4em;
-    transition: opacity 0.3s ease, transform 1s ease;
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  #service-section .service-container .left-services .service .line-break.in-view {
-    background-color: white;
-  }
-  #service-section .service-container .left-services .service .line-break.slide {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  #service-section .service-container .left-services .service .service-wrapper {
-    overflow: hidden;
-  }
-  #service-section .service-container .left-services .service .service-wrapper .service-heading {
-    font-family: "heading";
-    margin-bottom: 0;
-    transition: opacity 0.3s ease, transform 1.5s ease;
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  #service-section .service-container .left-services .service .service-wrapper .service-heading.in-view {
-    color: white;
-  }
-  #service-section .service-container .left-services .service .service-wrapper .service-heading.slide {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  #service-section .service-container .left-services .service .service-wrapper .service-body {
-    padding-bottom: 1em;
-    font-family: "heading";
-    font-weight: 500;
-    transition: opacity 0.3s ease, transform 1.5s ease;
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  #service-section .service-container .left-services .service .service-wrapper .service-body.in-view {
-    color: white;
-  }
-  #service-section .service-container .left-services .service .service-wrapper .service-body.slide {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  #service-section .service-container .right-services {
-    width: 40%;
-    overflow: hidden;
-  }
-  #service-section .service-container .right-services .service {
-    padding-top: 8em;
-    overflow: hidden;
-  }
-  #service-section .service-container .right-services .service .line-break {
-    width: 100%;
-    background-color: #000;
-    height: 1.5px;
-    border-radius: 5px;
-    margin-top: .4em;
-    margin-bottom: .4em;
-    transition: opacity 0.3s ease, transform 1s ease;
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  #service-section .service-container .right-services .service .line-break.in-view {
-    background-color: white;
-  }
-  #service-section .service-container .right-services .service .line-break.slide {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  #service-section .service-container .right-services .service .service-wrapper {
-    overflow: hidden;
-  }
-  #service-section .service-container .right-services .service .service-wrapper .service-heading {
-    font-family: "heading";
-    margin-bottom: 0;
-    transition: opacity 0.3s ease, transform 1.5s ease;
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  #service-section .service-container .right-services .service .service-wrapper .service-heading.in-view {
-    color: white;
-  }
-  #service-section .service-container .right-services .service .service-wrapper .service-heading.slide {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  #service-section .service-container .right-services .service .service-wrapper .service-body {
-    padding-bottom: 1em;
-    font-family: "heading";
-    font-weight: 500;
-    transition: opacity 0.3s ease, transform 1.5s ease;
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  #service-section .service-container .right-services .service .service-wrapper .service-body.in-view {
-    color: white;
-  }
-  #service-section .service-container .right-services .service .service-wrapper .service-body.slide {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  #service-section .center-button {
-    text-align: left;
-    padding-top: 2em;
+  #service-section .service-container .services-group .service {
+    text-align: center;
     padding-bottom: 2em;
+    padding-top: 2em;
+    margin-bottom: 2em;
+    background-color: #ededed;
+    border-radius: 30px;
+  }
+  #service-section .service-container .services-group .service .service-icon .icon-img {
+    width: 24%;
+    height: auto;
+  }
+  #service-section .service-container .services-group .service .service-heading {
+    margin-bottom: 1em;
+    font-family: "heading";
+  }
+  #service-section .service-container .services-group .service .service-info {
+    font-family: "heading";
+    font-size: ;
   }
 }
 /* Tablet */
+@media only screen and (min-width: 48em) {
+  #service-section .service-container {
+    width: 90%;
+    margin: auto;
+  }
+  #service-section .service-container .services-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #service-section .service-container .services-group .service {
+    width: 45%;
+  }
+  #service-section .service-container .services-group .service .service-icon .icon-img {
+    width: 25%;
+    height: auto;
+  }
+}
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #service-section {
     max-width: 1200px;
   }
+  #service-section .service-container .services-group .service {
+    width: 23%;
+  }
+  #service-section .service-container .services-group .service .service-icon .icon-img {
+    width: 50%;
+    height: auto;
+  }
 }
 /* Large Desktop */
 @media only screen and (min-width: 1500px) {
   #service-section {
+    max-width: 1300px;
+  }
+}
+/*-- -------------------------- -->
+<---           Pricing          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #pricing-section .pricing-container {
+    width: 90%;
+    margin: auto;
+  }
+}
+/* Tablet */
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #pricing-section {
+    max-width: 1200px;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1500px) {
+  #pricing-section {
     max-width: 1300px;
   }
 }
